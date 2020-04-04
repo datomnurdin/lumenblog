@@ -14,3 +14,10 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->get('/posts', 'PostsController@index');
+$router->get('/post/{id}', 'PostsController@show');
+$router->post('/post', 'PostsController@store');
+$router->put('/post', 'PostsController@store');
+$router->delete('/post/{id}', 'PostsController@destroy');
+
